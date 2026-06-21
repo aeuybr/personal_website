@@ -23,3 +23,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     target.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+const resumeFab = document.querySelector('.resume-fab');
+const resumeSection = document.getElementById('resume');
+
+if (resumeFab && resumeSection) {
+  const observer = new IntersectionObserver(
+    ([entry]) => resumeFab.classList.toggle('is-hidden', entry.isIntersecting),
+    { threshold: 0.15 }
+  );
+  observer.observe(resumeSection);
+}
