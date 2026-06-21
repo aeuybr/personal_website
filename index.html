@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Репетитор — личный сайт и резюме">
+  <title>[Ваше имя] — Репетитор</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <a href="#hero" class="header__logo">Резюме</a>
+    <nav class="header__nav" aria-label="Основная навигация">
+      <a href="#about">обо мне</a>
+      <a href="#resume">резюме</a>
+      <a href="#achievements">достижения</a>
+      <a href="#contacts">контакты</a>
+    </nav>
+    <button class="header__menu-btn" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="main-layout">
+
+    <div class="main-layout__content">
+
+      <!-- Герой -->
+      <section id="hero" class="hero">
+        <div class="hero__content">
+          <h1 class="hero__name">[Ваше имя]</h1>
+          <p class="hero__title">Репетитор</p>
+          <p class="hero__subjects">[Предметы: математика, физика, …]</p>
+
+          <div class="hero__contacts">
+            <p><span class="label">Телефон</span> <a href="tel:+70000000000">[+7 XXX XXX-XX-XX]</a></p>
+            <p><span class="label">Эл. почта</span> <a href="mailto:email@example.com">[email@example.com]</a></p>
+            <p><span class="label">Адрес</span> [Город, страна]</p>
+            <p class="hero__social">
+              <a href="#">[Telegram]</a>
+              <span class="dot">•</span>
+              <a href="#">[VK]</a>
+              <span class="dot">•</span>
+              <a href="#">[LinkedIn]</a>
+            </p>
+          </div>
+        </div>
+
+        <a href="#resume" class="hero__scroll">
+          <span>Резюме</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 4v12M10 16l-4-4M10 16l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </section>
+
+      <!-- Обо мне -->
+      <section id="about" class="section">
+        <h2 class="section__title">Обо мне</h2>
+        <div class="section__body">
+          <p class="placeholder-text">
+            [Напишите здесь кратко о себе: кто вы, чем занимаетесь, ваш подход к обучению.
+            2–4 предложения — достаточно для клиентов и приёмной комиссии.]
+          </p>
+          <ul class="about-list">
+            <li><strong>Опыт:</strong> [X лет репетиторства]</li>
+            <li><strong>Формат:</strong> [онлайн / очно / оба]</li>
+            <li><strong>Языки:</strong> [русский, англский, …]</li>
+            <li><strong>Уровни:</strong> [школа, ЕГЭ/ОГЭ, олимпиады, …]</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Резюме -->
+      <section id="resume" class="section">
+        <h2 class="section__title">Резюме</h2>
+        <div class="section__body">
+
+          <div class="resume-block">
+            <h3>Образование</h3>
+            <div class="resume-item">
+              <p class="resume-item__period">[Год — Год]</p>
+              <p class="resume-item__title">[Название учебного заведения]</p>
+              <p class="resume-item__desc">[Специальность, степень, GPA если нужно]</p>
+            </div>
+            <div class="resume-item">
+              <p class="resume-item__period">[Год — Год]</p>
+              <p class="resume-item__title">[Школа / колледж]</p>
+              <p class="resume-item__desc">[Краткое описание]</p>
+            </div>
+          </div>
+
+          <div class="resume-block">
+            <h3>Опыт</h3>
+            <div class="resume-item">
+              <p class="resume-item__period">[Год — настоящее время]</p>
+              <p class="resume-item__title">Репетитор по [предмету]</p>
+              <p class="resume-item__desc">[Описание: с кем работали, формат, результаты учеников]</p>
+            </div>
+            <div class="resume-item">
+              <p class="resume-item__period">[Год — Год]</p>
+              <p class="resume-item__title">[Другая должность / волонтёрство]</p>
+              <p class="resume-item__desc">[Описание]</p>
+            </div>
+          </div>
+
+          <div class="resume-block">
+            <h3>Навыки</h3>
+            <div class="skills">
+              <span class="skill-tag">[Предмет 1]</span>
+              <span class="skill-tag">[Предмет 2]</span>
+              <span class="skill-tag">[Методика]</span>
+              <span class="skill-tag">[Язык]</span>
+              <span class="skill-tag">[Сертификат]</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Фото: липнет при прокрутке до блока «Достижения» -->
+    <aside class="main-layout__aside">
+      <div class="sticky-photo">
+        <div class="hero__photo-wrap">
+          <img src="images/photo.jpg" alt="[Ваше имя]" class="hero__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="hero__photo-placeholder" style="display:none">
+            <span>Добавьте фото<br>в папку images/</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Достижения -->
+  <section id="achievements" class="section section--achievements">
+    <div class="achievements__header">
+      <h2 class="section__title">Достижения</h2>
+      <p class="section__subtitle">Олимпиады, экзамены, награды и результаты учеников</p>
+    </div>
+
+    <div class="achievements__grid">
+
+      <article class="achievement-card">
+        <span class="achievement-card__year">[Год]</span>
+        <h3 class="achievement-card__title">[Название достижения]</h3>
+        <p class="achievement-card__desc">[Описание: место, балл, конкурс, диплом и т.д.]</p>
+      </article>
+
+      <article class="achievement-card">
+        <span class="achievement-card__year">[Год]</span>
+        <h3 class="achievement-card__title">[Название достижения]</h3>
+        <p class="achievement-card__desc">[Описание]</p>
+      </article>
+
+      <article class="achievement-card">
+        <span class="achievement-card__year">[Год]</span>
+        <h3 class="achievement-card__title">[Название достижения]</h3>
+        <p class="achievement-card__desc">[Описание]</p>
+      </article>
+
+      <article class="achievement-card">
+        <span class="achievement-card__year">[Год]</span>
+        <h3 class="achievement-card__title">[Результаты учеников]</h3>
+        <p class="achievement-card__desc">[Например: «3 ученика сдали ЕГЭ на 90+»]</p>
+      </article>
+
+      <article class="achievement-card">
+        <span class="achievement-card__year">[Год]</span>
+        <h3 class="achievement-card__title">[Сертификат / курс]</h3>
+        <p class="achievement-card__desc">[Описание]</p>
+      </article>
+
+      <article class="achievement-card achievement-card--empty">
+        <span class="achievement-card__year">+</span>
+        <h3 class="achievement-card__title">Добавьте ещё</h3>
+        <p class="achievement-card__desc">Скопируйте блок <code>&lt;article class="achievement-card"&gt;</code> в index.html</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts" class="section section--contacts">
+    <div class="contacts__inner">
+      <div class="contacts__info">
+        <h2 class="section__title">Контакты</h2>
+        <p class="contacts__text">
+          [Краткое приглашение: «Свяжитесь со мной для записи на занятие или консультации»]
+        </p>
+        <ul class="contacts__list">
+          <li>
+            <span class="label">Телефон</span>
+            <a href="tel:+70000000000">[+7 XXX XXX-XX-XX]</a>
+          </li>
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:email@example.com">[email@example.com]</a>
+          </li>
+          <li>
+            <span class="label">Telegram</span>
+            <a href="#">[@username]</a>
+          </li>
+          <li>
+            <span class="label">Город</span>
+            [Город, страна]
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__cta">
+        <p>Готовы начать?</p>
+        <a href="mailto:email@example.com" class="btn">Написать мне</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Плавающая кнопка -->
+  <a href="#about" class="fab" aria-label="Перейти к разделу «Обо мне»">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M8 12V4M8 4L5 7M8 4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    обо мне
+  </a>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> [Ваше имя]. Все права защищены.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
